@@ -1,0 +1,55 @@
+/* Definição das constantes na raiz */
+:root {
+  --green: #F5F5F5;
+  --white: #FFFFFF;
+  --black: #1A1A1A;
+}
+
+/* Seletor universal para cores e fontes */
+* {
+  color: var(--fontColor);
+  font-family: helvetica;
+}
+
+body {
+  background: var(--bg);
+}
+
+/* Estilo do botão arredondado e posicionado */
+.btn {
+    position: absolute;
+    top: 20px;
+    left: 250px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
+}
+
+/* Remove o contorno retangular ao clicar */
+.btn:focus { 
+    outline-style: none; 
+}
+
+/* Outros estilos de texto */
+#msg { font-family: monospace; }
+ul { font-family: helvetica; }
+li { list-style: circle; }
+.list { list-style: square; }
+
+/* Configuração dos temas (Cores de fundo, texto e botão) */
+.light-theme {
+  --bg: #FAFAFA;
+  --fontColor: #2D2D2D;
+  --btnBg: #333333;
+  --btnFontColor: #FFFFFF;
+}
+
+.dark-theme {
+  --bg: #0F0F0F;
+  --fontColor: #E8E8E8;
+  --btnBg: #FFFFFF;
+  --btnFontColor: #1A1A1A;
+}
