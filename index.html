@@ -4,11 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerador de Versículos</title>
-    <link rel="stylesheet" href="main.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 450px;
+            width: 90%;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        #verse-container {
+            margin: 20px 0;
+            min-height: 80px;
+        }
+
+        #verse-text {
+            font-size: 1.1rem;
+            color: #34495e;
+            font-style: italic;
+        }
+
+        #verse-reference {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #2980b9;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <h1>📖 Versículo do Dia</h1>
+        <h1>📖 Versículo Bíblico</h1>
         <div id="verse-container">
             <p id="verse-text">"Clique no botão abaixo para gerar um versículo."</p>
             <span id="verse-reference"></span>
@@ -16,6 +74,26 @@
         <button id="new-verse-btn">Gerar Versículo</button>
     </div>
 
-    <script src="app.js"></script>
+    <script>
+        const verses = [
+            { text: "Tudo posso naquele que me fortalece.", reference: "Filipenses 4:13" },
+            { text: "O Senhor é o meu pastor; nada me faltará.", reference: "Salmos 23:1" },
+            { text: "Porque Deus amou o mundo de tal maneira que deu o seu Filho unigênito...", reference: "João 3:16" },
+            { text: "O Senhor é a minha luz e a minha salvação; a quem temerei?", reference: "Salmos 27:1" },
+            { text: "Lâmpada para os meus pés é tua palavra e luz, para o meu caminho.", reference: "Salmos 119:105" }
+        ];
+
+        const verseText = document.getElementById('verse-text');
+        const verseReference = document.getElementById('verse-reference');
+        const btn = document.getElementById('new-verse-btn');
+
+        function generateVerse() {
+            const randomIndex = Math.floor(Math.random() * verses.length);
+            verseText.textContent = `"${verses[randomIndex].text}"`;
+            verseReference.textContent = verses[randomIndex].reference;
+        }
+
+        btn.addEventListener('click', generateVerse);
+    </script>
 </body>
 </html>
