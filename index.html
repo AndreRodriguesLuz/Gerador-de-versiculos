@@ -3,93 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerador de Versículos</title>
+    <title>Palavra de Fé Diária</title>
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #0b132b;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            margin: 0;
             padding: 20px;
-            box-sizing: border-box;
+            color: #ffffff;
         }
 
-        .container {
-            background: #ffffff;
-            padding: 40px 30px;
-            border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            text-align: center;
-            max-width: 500px;
+        .card {
+            background-color: #172033;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 32px;
+            max-width: 600px;
             width: 100%;
+            text-align: left;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
         }
 
         h1 {
-            color: #2c3e50;
-            margin-bottom: 25px;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #0096e6;
         }
 
         .verse-box {
-            min-height: 120px;
+            min-height: 90px;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 25px;
+            justify-content: flex-start;
+            margin-bottom: 24px;
         }
 
         #texto {
-            font-size: 1.15rem;
-            color: #34495e;
-            font-style: italic;
+            font-size: 1.1rem;
             line-height: 1.6;
-            margin: 0 0 15px 0;
+            color: #e2e8f0;
+            font-style: italic;
+            font-weight: 300;
+            margin-bottom: 12px;
         }
 
         #referencia {
-            font-weight: bold;
-            color: #2980b9;
             font-size: 1rem;
+            font-weight: 500;
+            color: #94a3b8;
         }
 
         button {
-            background-color: #3498db;
-            color: white;
-            border: none;
-            padding: 14px 28px;
-            font-size: 1rem;
+            background-color: #0084d4;
+            color: #ffffff;
             font-weight: 600;
-            border-radius: 8px;
+            font-size: 0.95rem;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
             cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
             transition: background-color 0.2s ease, transform 0.1s ease;
         }
 
         button:hover {
-            background-color: #2980b9;
+            background-color: #0073b8;
         }
 
         button:active {
             transform: scale(0.98);
         }
+
+        .dice-icon {
+            font-size: 1.1rem;
+            line-height: 1;
+        }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>📖 Versículo do Dia</h1>
+    <div class="card">
+        <h1>Palavra de Fé Diária</h1>
         <div class="verse-box">
-            <p id="texto">Carregando versículo...</p>
-            <span id="referencia"></span>
+            <p id="texto">"Clique abaixo para meditar em um versículo aleatório."</p>
+            <span id="referencia">---</span>
         </div>
-        <button onclick="gerarVersiculoAleatorio()">Gerar Novo Versículo</button>
+        <button onclick="gerarVersiculoSemRepetir()">
+            <span class="dice-icon">🎲</span> Receber Palavra
+        </button>
     </div>
 
     <script>
-        // Biblioteca de Versículos Integrada
         const bibliotecaVersiculos = [
             // Antigo Testamento
             { texto: "No princípio, criou Deus os céus e a terra.", referencia: "Gênesis 1:1" },
@@ -117,6 +133,11 @@
             { texto: "Buscar-me-eis e me achareis quando me buscardes de todo o vosso coração.", referencia: "Jeremias 29:13" },
             { texto: "As misericórdias do Senhor são a causa de não sermos consumidos; renovam-se cada manhã.", referencia: "Lamentações 3:22-23" },
             { texto: "O Senhor é bom, uma fortaleza no dia da angústia, e conhece os que confiam nele.", referencia: "Naum 1:7" },
+            { texto: "Bendito o homem que confia no Senhor, e cuja esperança é o Senhor.", referencia: "Jeremias 17:7" },
+            { texto: "Provai e vede que o Senhor é bom; bem-aventurado o homem que nele confia.", referencia: "Salmos 34:8" },
+            { texto: "Perto está o Senhor dos que têm o coração quebrantado.", referencia: "Salmos 34:18" },
+            { texto: "Agrada-te do Senhor, e ele satisfará os desejos do teu coração.", referencia: "Salmos 37:4" },
+            { texto: "Entrega o teu caminho ao Senhor; confia nele, e ele tudo fará.", referencia: "Salmos 37:5" },
 
             // Novo Testamento
             { texto: "Vocês são a luz do mundo. Não se pode esconder uma cidade construída sobre um monte.", referencia: "Mateus 5:14" },
@@ -161,22 +182,24 @@
             { texto: "Eis que estou à porta e bato. Se alguém ouvir a minha voz e abrir a porta, entrarei em sua casa e comerei com ele, e ele comigo.", referencia: "Apocalipse 3:20" }
         ];
 
-        // Função para selecionar e exibir um versículo aleatório
-        function gerarVersiculoAleatorio() {
+        let versiculosRestantes = [...bibliotecaVersiculos];
+
+        function gerarVersiculoSemRepetir() {
             const elTexto = document.getElementById('texto');
             const elRef = document.getElementById('referencia');
 
             if (!elTexto || !elRef) return;
 
-            const indice = Math.floor(Math.random() * bibliotecaVersiculos.length);
-            const item = bibliotecaVersiculos[indice];
+            if (versiculosRestantes.length === 0) {
+                versiculosRestantes = [...bibliotecaVersiculos];
+            }
+
+            const indiceSorteado = Math.floor(Math.random() * versiculosRestantes.length);
+            const item = versiculosRestantes.splice(indiceSorteado, 1)[0];
 
             elTexto.innerText = `"${item.texto}"`;
-            elRef.innerText = `- ${item.referencia}`;
+            elRef.innerText = item.referencia;
         }
-
-        // Inicializa automaticamente com um versículo ao abrir
-        window.onload = gerarVersiculoAleatorio;
     </script>
 </body>
 </html>
