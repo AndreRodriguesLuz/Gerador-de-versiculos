@@ -1,55 +1,63 @@
-/* Definição das constantes na raiz */
-:root {
-  --green: #F5F5F5;
-  --white: #FFFFFF;
-  --black: #1A1A1A;
-}
-
-/* Seletor universal para cores e fontes */
-* {
-  color: var(--fontColor);
-  font-family: helvetica;
-}
-
+/* Configuração do fundo com um degradê suave */
 body {
-  background: var(--bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #74ebd5, #9face6);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
 }
 
-/* Estilo do botão arredondado e posicionado */
-.btn {
-    position: absolute;
-    top: 20px;
-    left: 250px;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
+/* Cartão onde o versículo vai aparecer */
+.card {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+}
+
+/* Estilo do texto do versículo */
+#texto-versiculo {
+    font-size: 1.5rem;
+    color: #333333;
+    font-style: italic;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Estilo da referência (Livro e Capítulo) */
+#referencia-versiculo {
+    font-size: 1.1rem;
+    color: #666666;
+    font-weight: bold;
+    margin-bottom: 30px;
+    display: block;
+}
+
+/* Botão interativo */
+button {
+    background-color: #6c5ce7;
+    color: #ffffff;
     border: none;
-    color: var(--btnFontColor);
-    background-color: var(--btnBg);
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(108, 92, 231, 0.4);
+    transition: transform 0.2s, background-color 0.2s;
 }
 
-/* Remove o contorno retangular ao clicar */
-.btn:focus { 
-    outline-style: none; 
+/* Efeitos ao passar o mouse e clicar */
+button:hover {
+    background-color: #5b4cc4;
+    transform: translateY(-2px);
 }
 
-/* Outros estilos de texto */
-#msg { font-family: monospace; }
-ul { font-family: helvetica; }
-li { list-style: circle; }
-.list { list-style: square; }
-
-/* Configuração dos temas (Cores de fundo, texto e botão) */
-.light-theme {
-  --bg: #FAFAFA;
-  --fontColor: #2D2D2D;
-  --btnBg: #333333;
-  --btnFontColor: #FFFFFF;
-}
-
-.dark-theme {
-  --bg: #0F0F0F;
-  --fontColor: #E8E8E8;
-  --btnBg: #FFFFFF;
-  --btnFontColor: #1A1A1A;
+button:active {
+    transform: translateY(0);
 }
