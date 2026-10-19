@@ -67,7 +67,22 @@ const bibliotecaVersiculos = [
     { texto: "Ora, a fé é a certeza de coisas que se esperam, a convicção de fatos que se não veem.", referencia: "Hebreus 11:1" },
     { texto: "Jesus Cristo é o mesmo ontem, hoje e para sempre.", referencia: "Hebreus 13:8" },
     { texto: "Se algum de vocês tem falta de sabedoria, peça-a a Deus, que a todos dá livremente.", referencia: "Tiago 1:5" },
-    { texto: "Aproximem-se de Deus, e ele se aproximará de vocês.", referencia: "Tiago 4:8" }
+    { texto: "Aproximem-se de Deus, e ele se aproximará de vocês.", referencia: "Tiago 4:8" },
+
+    // NOVOS VERSÍCULOS ADICIONADOS
+    { texto: "Não fui eu que lhe ordenei? Seja forte e corajoso! Não se apavore, nem desanime, pois o Senhor, o seu Deus, estará com você por onde você andar.", referencia: "Josué 1:9" },
+    { texto: "Guardei a tua palavra no meu coração, para não pecar contra ti.", referencia: "Salmos 119:11" },
+    { texto: "Portanto, curvem-se debaixo da poderosa mão de Deus, para que ele os exalte no tempo certo, lançando sobre ele toda a vossa ansiedade, porque ele tem cuidado de vós.", referencia: "1 Pedro 5:6-7" },
+    { texto: "Clame a mim e eu responderei e lhe direi coisas grandiosas e insondáveis que você não conhece.", referencia: "Jeremias 33:3" },
+    { texto: "Consola-me na minha aflição, porque a tua promessa me dá vida.", referencia: "Salmos 119:50" },
+    { texto: "O Senhor lutará por vós; tão somente acalmai-vos.", referencia: "Êxodo 14:14" },
+    { texto: "Deem graças ao Senhor, porque ele é bom; o seu amor dura para sempre.", referencia: "Salmos 107:1" },
+    { texto: "O próprio Senhor irá à sua frente e estará com você; ele nunca o deixará, nunca o abandonará. Não tenha medo! Não desanime!", referencia: "Deuteronômio 31:8" },
+    { texto: "Sejam fortes e corajosos. Não tenham medo nem fiquem apavorados por causa deles, pois o Senhor, o seu Deus, vai com vocês.", referencia: "Deuteronômio 31:6" },
+    { texto: "O Senhor é o meu rochedo, a minha fortaleza e o meu libertador; o meu Deus é o meu rochedo, em quem me refugio.", referencia: "Salmos 18:2" },
+    { texto: "Os passos de um homem bom são confirmados pelo Senhor, e ele deleita-se no seu caminho.", referencia: "Salmos 37:23" },
+    { texto: "Ainda que caia, não ficará prostrado, pois o Senhor o segura pela mão.", referencia: "Salmos 37:24" },
+
 ];
 
 let versiculosSorteados = [];
