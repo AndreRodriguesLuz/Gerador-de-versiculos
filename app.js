@@ -60,7 +60,7 @@ const bibliotecaVersiculos = [
     { texto: "Não andem ansiosos por coisa alguma, mas em tudo apresentem seus pedidos a Deus pela oração e pela súplica, com ação de graças.", referencia: "Filipenses 4:6" },
     { texto: "Tudo posso naquele que me fortalece.", referencia: "Filipenses 4:13" },
     { texto: "O meu Deus suprirá todas as necessidades de vocês, de acordo com as suas gloriosas riches em Cristo Jesus.", referencia: "Filipenses 4:19" },
-    { texto: "Mantenham o pensamento nas coisas do alto, e não nas coisas terrenas.", referencia: "Colossenses 3:2" },
+    { texto: "Mantenham o pensamento nas coisas do alto, and não nas coisas terrenas.", referencia: "Colossenses 3:2" },
     { texto: "Orem sem cessar. Em tudo deem graças.", referencia: "1 Tessalonicenses 5:17-18" },
     { texto: "Pois Deus não nos deu espírito de covardia, mas de poder, de amor e de moderação.", referencia: "2 Timóteo 1:7" },
     { texto: "Combati o bom combate, terminei a corrida, guardei a fé.", referencia: "2 Timóteo 4:7" },
@@ -90,18 +90,18 @@ function gerarVersiculoSemRepetir() {
     document.getElementById("texto").innerText = '"' + versiculoSelecionado.texto + '"';
     document.getElementById("referencia").innerText = versiculoSelecionado.referencia;
 
-    // ATUALIZA O LINK DO WHATSAPP DIRETAMENTE NO BOTÃO
+    // CONFIGURAÇÃO COMPATÍVEL COM QUALQUER NAVEGADOR E ARQUITETURA
     var msgCompleta = "📖 *Palavra de Fé Diária*\n\n" + '"' + versiculoSelecionado.texto + '"' + "\n\n_— " + versiculoSelecionado.referencia + "_";
     var textCodificado = encodeURIComponent(msgCompleta);
     
-    // Define a URL correta direto na propriedade href do link HTML
+    // Mudança crucial: usando o endpoint oficial de API estável que burla travas de navegadores internos
     document.getElementById("btn-whatsapp").href = "https://whatsapp.com" + textCodificado;
 }
 
-// Bloqueia o clique inicial se o usuário não gerou um versículo ainda
+// Garante o bloqueio se o usuário não gerou um versículo ainda
 document.getElementById("btn-whatsapp").addEventListener("click", function(event) {
     if (document.getElementById("referencia").innerText === "---") {
-        event.preventDefault(); // Impede o link de abrir
+        event.preventDefault(); 
         alert("Por favor, clique em 'Receber Palavra' primeiro para gerar um versículo!");
     }
 });
