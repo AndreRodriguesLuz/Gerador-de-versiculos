@@ -100,7 +100,7 @@ document.getElementById("btn-whatsapp").addEventListener("click", function() {
         return;
     }
 
-    var linkDoMeuSite = "http://127.0.0.1:5500";
+    var linkDoMeuSite = "https://andrerodriguesluz.github.io/Gerador-de-versiculos/";
     var msgCompleta = "📖 *Palavra de Fé Diária*\n\n" + '"' + versiculoAtual.texto + '"' + "\n\n_— " + versiculoAtual.referencia + "_\n\n👉 Gere o seu também em: " + linkDoMeuSite;
 
     navigator.clipboard.writeText(msgCompleta).then(function() {
