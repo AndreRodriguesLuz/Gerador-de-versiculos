@@ -2,7 +2,7 @@ const bibliotecaVersiculos = [
     // Antigo Testamento
     { texto: "No princípio, criou Deus os céus e a terra.", referencia: "Gênesis 1:1" },
     { texto: "O Senhor é o meu pastor; nada me faltará.", referencia: "Salmos 23:1" },
-    { texto: "Ainda que eu andasse pelo vale da sombra da morte, não temeria mal algum, porque tu estás comigo.", referencia: "Salmos 23:4" },
+    { texto: "Ainda que eu andasse pelo vale da sombra da morte, não temeria mal algum, because tu estás comigo.", referencia: "Salmos 23:4" },
     { texto: "O Senhor é a minha luz e a minha salvação; de quem terei medo?", referencia: "Salmos 27:1" },
     { texto: "Deus é o nosso refúgio e fortaleza, socorro bem presente na angústia.", referencia: "Salmos 46:1" },
     { texto: "Cria em mim, ó Deus, um coração puro e renova dentro de mim um espírito inabalável.", referencia: "Salmos 51:10" },
@@ -17,7 +17,7 @@ const bibliotecaVersiculos = [
     { texto: "Consagre ao Senhor tudo o que você faz, e os seus planos serão bem-sucedidos.", referencia: "Provérbios 16:3" },
     { texto: "Como a boa água para o sedento, assim são as boas novas vindas de uma terra distante.", referencia: "Provérbios 25:25" },
     { texto: "Há tempo para todo propósito debaixo do céu.", referencia: "Eclesiastes 3:1" },
-    { texto: "Melhor é serem dois do que um, porque têm melhor paga do seu trabalho.", referencia: "Eclesiastes 4:9" },
+    { texto: "Melhor é serem dois do que um, because têm melhor paga do seu trabalho.", referencia: "Eclesiastes 4:9" },
     { texto: "Os que esperam no Senhor renovarão as suas forças; voarão alto como águias.", referencia: "Isaías 40:31" },
     { texto: "Não tema, pois estou com você; não se pavorize, pois sou o seu Deus.", referencia: "Isaías 41:10" },
     { texto: "Ele foi ferido por causa das nossas transgressões e moído por causa das nossas iniquidades.", referencia: "Isaías 53:5" },
@@ -38,7 +38,7 @@ const bibliotecaVersiculos = [
     { texto: "Venham a mim, todos os que estão cansados e sobrecarregados, e eu lhes darei descanso.", referencia: "Mateus 11:28" },
     { texto: "Pois onde estiverem dois ou três reunidos em meu nome, ali eu estou no meio deles.", referencia: "Mateus 18:20" },
     { texto: "Para Deus tudo é possível.", referencia: "Mateus 19:26" },
-    { texto: "Eis que estou convosco todos os dias, até a consumação dos séculos.", referencia: "Mateus 28:20" },
+    { texto: "Eis que estou convosco todos os dias, até a consumação dos sécules.", referencia: "Mateus 28:20" },
     { texto: "Porque Deus amou o mundo de tal maneira que deu o seu Filho unigênito, para que todo aquele que nele crê não perca, mas tenha a vida eterna.", referencia: "João 3:16" },
     { texto: "Eu sou o pão da vida; aquele que vem a mim não terá fome.", referencia: "João 6:35" },
     { texto: "E conhecerão a verdade, e a verdade os libertará.", referencia: "João 8:32" },
@@ -52,14 +52,14 @@ const bibliotecaVersiculos = [
     { texto: "O amor é paciente, o amor é bondoso. Não inveja, não se vangloria, não se orgulha.", referencia: "1 Coríntios 13:4" },
     { texto: "Agora, pois, permanecem a fé, a esperança e o amor, estes três; mas o maior destes é o amor.", referencia: "1 Coríntios 13:13" },
     { texto: "Portanto, se alguém está em Cristo, é nova criação. As coisas antigas já passaram; eis que surgiram coisas novas!", referencia: "2 Coríntios 5:17" },
-    { texto: "A minha graça te basta, porque o meu poder se aperfeiçoa na fraqueza.", referencia: "2 Coríntios 12:9" },
+    { texto: "A minha graça te basta, because o meu poder se aperfeiçoa na fraqueza.", referencia: "2 Coríntios 12:9" },
     { texto: "Foi para a liberdade que Cristo nos libertou. Portanto, permaneçam firmes.", referencia: "Gálatas 5:1" },
     { texto: "Mas o fruto do Espírito é: amor, alegria, paz, paciência, amabilidade, bondade, fidelidade, mansidão e domínio próprio.", referencia: "Gálatas 5:22-23" },
     { texto: "Pela graça vocês são salvos, por meio da fé; e isto não vem de vocês, é dom de Deus.", referencia: "Efésios 2:8" },
     { texto: "Aquele que é capaz de fazer infinitamente mais do que tudo o que pedimos ou pensamos, de acordo com o seu poder que atua em nós.", referencia: "Efésios 3:20" },
     { texto: "Não andem ansiosos por coisa alguma, mas em tudo apresentem seus pedidos a Deus pela oração e pela súplica, com ação de graças.", referencia: "Filipenses 4:6" },
     { texto: "Tudo posso naquele que me fortalece.", referencia: "Filipenses 4:13" },
-    { texto: "O meu Deus suprirá todas as necessidades de vocês, de acordo com as suas gloriosas riquezas em Cristo Jesus.", referencia: "Filipenses 4:19" },
+    { texto: "O meu Deus suprirá todas as necessidades de vocês, de acordo com as suas gloriosas riches em Cristo Jesus.", referencia: "Filipenses 4:19" },
     { texto: "Mantenham o pensamento nas coisas do alto, e não nas coisas terrenas.", referencia: "Colossenses 3:2" },
     { texto: "Orem sem cessar. Em tudo deem graças.", referencia: "1 Tessalonicenses 5:17-18" },
     { texto: "Pois Deus não nos deu espírito de covardia, mas de poder, de amor e de moderação.", referencia: "2 Timóteo 1:7" },
@@ -67,28 +67,41 @@ const bibliotecaVersiculos = [
     { texto: "Ora, a fé é a certeza de coisas que se esperam, a convicção de fatos que se não veem.", referencia: "Hebreus 11:1" },
     { texto: "Jesus Cristo é o mesmo ontem, hoje e para sempre.", referencia: "Hebreus 13:8" },
     { texto: "Se algum de vocês tem falta de sabedoria, peça-a a Deus, que a todos dá livremente.", referencia: "Tiago 1:5" },
-    { texto: "Aproximem-se de Deus, e ele se aproximará de vocês.", referencia: "Tiago 4:8" },
-    { texto: "Lançando sobre ele toda a sua ansiedade, porque ele tem cuidado de vocês.", referencia: "1 Pedro 5:7" },
-    { texto: "Se confessarmos os nossos pecados, ele é fiel e justo para nos perdoar os pecados e nos purificar de toda injustiça.", referencia: "1 João 1:9" },
-    { texto: "Nós amamos porque ele nos amou primeiro.", referencia: "1 João 4:19" },
-    { texto: "Eis que estou à porta e bato. Se alguém ouvir a minha voz e abrir a porta, entrarei em sua casa e comerei com ele, e ele comigo.", referencia: "Apocalipse 3:20" }
+    { texto: "Aproximem-se de Deus, e ele se aproximará de vocês.", referencia: "Tiago 4:8" }
 ];
 
-let versiculosRestantes = [...bibliotecaVersiculos];
+let versiculosSorteados = [];
 
 function gerarVersiculoSemRepetir() {
-    const elTexto = document.getElementById('texto');
-    const elRef = document.getElementById('referencia');
-
-    if (!elTexto || !elRef) return;
-
-    if (versiculosRestantes.length === 0) {
-        versiculosRestantes = [...bibliotecaVersiculos];
+    if (versiculosSorteados.length === bibliotecaVersiculos.length) {
+        versiculosSorteados = [];
     }
 
-    const indiceSorteado = Math.floor(Math.random() * versiculosRestantes.length);
-    const item = versiculosRestantes.splice(indiceSorteado, 1)[0];
+    let indiceAleatorio;
+    let versiculoSelecionado;
 
-    elTexto.innerText = `"${item.texto}"`;
-    elRef.innerText = item.referencia;
+    do {
+        indiceAleatorio = Math.floor(Math.random() * bibliotecaVersiculos.length);
+        versiculoSelecionado = bibliotecaVersiculos[indiceAleatorio];
+    } while (versiculosSorteados.includes(indiceAleatorio));
+
+    versiculosSorteados.push(indiceAleatorio);
+
+    document.getElementById("texto").innerText = '"' + versiculoSelecionado.texto + '"';
+    document.getElementById("referencia").innerText = versiculoSelecionado.referencia;
+
+    // ATUALIZA O LINK DO WHATSAPP DIRETAMENTE NO BOTÃO
+    var msgCompleta = "📖 *Palavra de Fé Diária*\n\n" + '"' + versiculoSelecionado.texto + '"' + "\n\n_— " + versiculoSelecionado.referencia + "_";
+    var textCodificado = encodeURIComponent(msgCompleta);
+    
+    // Define a URL correta direto na propriedade href do link HTML
+    document.getElementById("btn-whatsapp").href = "https://whatsapp.com" + textCodificado;
 }
+
+// Bloqueia o clique inicial se o usuário não gerou um versículo ainda
+document.getElementById("btn-whatsapp").addEventListener("click", function(event) {
+    if (document.getElementById("referencia").innerText === "---") {
+        event.preventDefault(); // Impede o link de abrir
+        alert("Por favor, clique em 'Receber Palavra' primeiro para gerar um versículo!");
+    }
+});

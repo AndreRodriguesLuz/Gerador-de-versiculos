@@ -14,9 +14,16 @@
             <p id="texto">"Clique abaixo para meditar em um versículo aleatório."</p>
             <span id="referencia">---</span>
         </div>
+        
+        <!-- Botão Principal de Gerar Versículo -->
         <button onclick="gerarVersiculoSemRepetir()">
             <span class="dice-icon">🎲</span> Receber Palavra
         </button>
+
+        <!-- Link Direto de Compartilhar (Impedindo bloqueios do navegador) -->
+        <a id="btn-whatsapp" target="_blank" rel="noopener noreferrer" style="display: inline-block; text-decoration: none; margin-top: 10px; background-color: #25D366; color: white; padding: 10px 20px; border-radius: 5px; font-weight: bold; font-family: sans-serif; cursor: pointer;">
+            <span>💬</span> Compartilhar no WhatsApp
+        </a>
     </div>
 
     <script src="app.js"></script>
